@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 窗口元素
+        *  设置:      
+        *            position:relative;
+        *            overflow:hidden
+        */
+        .box {                         
+            width: 400px;
+            height: 100px;
+            background-color: gainsboro;
+            margin: auto;
+            margin-top: 200px;
+            border: 5px solid darkgray;
+            position: relative;
+            overflow: hidden;
+        }
+        /* 单元盒子元素
+         * 设置:     
+         *        postion:absolute;
+         *        top:0px;       
+         *        left:0px;
+         *        transition-delay:0.2s;
+         */
+        .content {
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transition-delay: 0.2s;
+
+        }
+        /*  单元元素
+         *  设置：
+         *         height与窗口元素相等
+         */
+        .one {
+            width: 100%;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="content" id="content">
+            <div class="one" style="background-color:yellow">2</div>
+            <div class="one" style="background-color:orangered">3</div>
+            <div class="one" style="background-color:tomato">4</div>
+            <div class="one" style="background-color:green">5</div>
+        </div>
+    </div>
+
+    <script>
+
+        var content = document.getElementById("content");
+
+        function addBanner(content,interval,eHeight) {
+            //content为 单元盒子元素， interval为单元元素变换间隔，eHeight为单元元素高度
+            var childLen = content.children.length;
+            content['order'] = 0;
+            var timer = setInterval(function () {
+                if (content['order'] == childLen - 1) {
+                    var copyDom = content.children[0].cloneNode(true);
+                    content.appendChild(copyDom);
+                    content.removeChild(content.children[0]);
+                    content.style.transition = "0s";
+                    content.style.top = (-1*eHeight*(childLen-2))+"px";
+                }
+                else {
+                    content["order"]++;
+                }
+                setTimeout(function () {
+                    content.style.transition = "0.3s";
+                    content.style.top = -100 * (content['order']) + 'px';
+                }, 500);
+            }, interval);
+        }
+
+        addBanner(content,3000,100);
+
+
+
+    </script>
+</body>
+
+</html>
