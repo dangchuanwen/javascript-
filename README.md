@@ -1,25 +1,50 @@
-#ËµÃ÷
-	¸Ãº¯ÊýÓÃÓÚÉÏÏÂÂÖ²¥µÄÎÞ·ì»¬¶¯£¬¿ÉÓÃÓÚÍøÕ¾ÉÏµÄ¹«¸æÏÔÊ¾µÈ¡£ÓÉÓÚ»ùÓÚcss3 µÄ 2d ×ª»»ÊµÏÖµÄ£¬ËùÒÔ¼æÈÝ²»Ì«ºÃ£¬µ«ÊÇ¿ÉÒÔÍ¨¹ý×Ô¶¨Òåjsº¯ÊýÀ´Ìæ´ú¸ÃÐ§¹ûËùÐèÒªµÄcss3Ð§¹û¡£
-#°²×°
+# åŸºäºŽJQueryçš„ä¸Šä¸‹å…¬å‘Šè½®æ’­æ’ä»¶
+## è¯´æ˜Ž
+#### è¯¥æ’ä»¶æ˜¯ä¸€ä¸ªåŸºäºŽJQueryçš„ä¸Šä¸‹è½®æ’­å…¬å‘Šæ’ä»¶ï¼Œæ‰€éœ€ä¾èµ–ä¸ºJQueryï¼Œäº†è§£JQueryè¯·ç§»æ­¥[https://www.runoob.com/jquery/jquery-tutorial.html]
+## å®‰è£…
+#### git clone è¯¥èµ„æºã€‚æ–‡ä»¶ä¸‹çš„  _jquery-3.3.1.js_  ä¸ºæ‰€éœ€ä¾èµ–æ–‡ä»¶ï¼Œ_dcwNoticeTool.js_ ä¸ºæ’ä»¶æ‰€åœ¨æ–‡ä»¶ã€‚åœ¨éœ€è¦çš„htmlæ–‡ä»¶çš„headéƒ¨åˆ†å¼•å…¥è¿™ä¸¤ä¸ªæ–‡ä»¶ã€‚ç±»ä¼¼äºŽ
 
-	ÓÃ±àÒëÆ÷´ò¿ªtest.html£¬ ¸´ÖÆ script ÀïÃæµÄaddBannerº¯Êý ·Åµ½ÄãÐèÒªµÄµØ·½¡£
-#Ê¹ÓÃ
-	##ÔÚÊ¹ÓÃ¸ÃÌØÐ§Ê±£¬ÐèÒªÒ»¶¨µÄ½á¹¹²ã£¬ÈçÏÂ£º
-	
-		<div class="box">
-        		<div class="content" id="content">
-            			<div class="one" style="background-color:yellow">2</div>
-            			<div class="one" style="background-color:orangered">3</div>
-            			<div class="one" style="background-color:tomato">4</div>
-            			<div class="one" style="background-color:green">5</div>
-       			 </div>
-    		</div>
-	
-	##ËµÃ÷
-		ÈçÉÏËùÊ¾£¬class="box"µÄdivÔªËØÎª´°¿ÚÔªËØ£¬¾ßÌåcssÒªÇó ¿ÉÒÔ²é¿´test.html ÏÂµÄcssÉèÖÃ¡£
-		          class="content"µÄdivÔªËØÎª µ¥ÔªÔªËØµÄºÐ×ÓÔªËØ£¬¾ßÌåcssÒªÇóÒ²ÔÚÎÄ¼þµÄcssÉèÖÃ¡£
-		          class="one"µÄdivÔªËØÎªµ¥ÔªÔªËØ£¬¾ßÌåcssÒªÇóÍ¬ÉÏÒ²ÔÚÎÄ¼þÖÐ¡£
-	##°ó¶¨ÊÂ¼þ
-		¾ßÌåÔõÃ´Ê¹ÓÃ¿É²é¿´ÎÄ¼þÏÂµÄaddBannerº¯Êý£¬ÀïÃæÓÐ×¢ÊÍ
-#À©Õ¹
-	¿ÉÍ¨¹ýÓÃjsÐ´µÄÔªËØÒÆ¶¯º¯ÊýÀ´Ìæ´úËùÐèÒªµÄcss3Ð§¹û£¬Ò²¿ÉÒÔ¸Ä±ä ·½Ïò ³ÉÎª ÆäËû·½ÏòµÄ ÎÞ·ì»¬¶¯¡£				
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.3.1.js"></script>
+    <script src="dcwNoticeTool.js"></script>
+    </head> 
+## ä½¿ç”¨
+#### è¯·çœ‹ä¸‹é¢çš„ä»£ç å—
+    <div class="box">                                                 <!-- ç›¸å¯¹å®šä½ -->
+        <div class="content" id="content">                            <!-- ç»å¯¹å®šä½ -->
+            <div class="one" style="background-color:yellow">1</div>
+            <div class="one" style="background-color:orangered">2</div>
+            <div class="one" style="background-color:tomato">3</div>
+            <div class="one" style="background-color:green">4</div>
+        </div>
+    </div>
+> class ä¸º box çš„ div å…ƒç´ ä¸ºå®¹å™¨å…ƒç´ ï¼Œå…¶ css éœ€è®¾ç½® 
+
+    position: relative;      
+    overflow: hidden;
+> class ä¸º content çš„divå…ƒç´ ä¸ºè½®æ’­åŸºæœ¬å…ƒç´ çš„çˆ¶å…ƒç´ ï¼Œå…¶ css éœ€è®¾ç½®    
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+> class ä¸ºone çš„å…ƒç´ ä¸ºè½®æ’­åŸºæœ¬å…ƒç´ ï¼Œå…¶ css å®½é«˜ä¸èƒ½è¶…è¿‡å®¹å™¨å…ƒç´ çš„å®½é«˜
+
+#### å¼•å…¥
+> åœ¨htmlæ–‡ä»¶çš„ body åº•éƒ¨ æ‰§è¡Œ æ’ä»¶ç»‘å®šï¼Œè¯·çœ‹ä¸‹é¢çš„ä»£ç 
+    
+    -
+        <script>
+           _NoticeTool('content', 3000);   //ç¬¬ä¸€ä¸ªå‚æ•°ä¸ºè½®æ’­åŸºæœ¬å…ƒç´ çš„çˆ¶å…ƒç´ çš„id,ç¬¬äºŒä¸ªå‚æ•°ä¸ºè½®æ’­é—´éš”æ—¶é—´
+         </script>
+    </body>
+    
+    
+    
+    
+    
+    
+    

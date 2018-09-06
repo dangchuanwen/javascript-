@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.3.1.js"></script>
+    <script src="dcwNoticeTool.js"></script>
+</head>    
+    <style>
+        /* 窗口元素
+        *  设置:      
+        *            position:relative;
+        *            overflow:hidden
+        */
+
+        .box {
+            width: 400px;               
+            height: 100px;
+            background-color: gainsboro;
+            margin: auto;
+            margin-top: 200px;
+            border: 5px solid darkgray;
+            position: relative;      
+            overflow: hidden;
+        }
+
+        /* 单元盒子元素
+         * 设置:     
+         *        postion:absolute;
+         *        top:0px;       
+         *        left:0px;
+         *        transition-delay:0.2s;
+         */
+
+        .content {
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        /*  单元元素
+         *  设置：
+         *         height与窗口元素相等
+         */
+
+        .one {
+            width: 100%;
+
+            height: 100px;
+        }
+    </style>
+
+
+<body>
+   
+    <div class="box">                                                 <!-- 相对定位 -->
+        <div class="content" id="content">                            <!-- 绝对定位 -->
+            <div class="one" style="background-color:yellow">1</div>
+            <div class="one" style="background-color:orangered">2</div>
+            <div class="one" style="background-color:tomato">3</div>
+            <div class="one" style="background-color:green">4</div>
+        </div>
+    </div>
+    <script>
+          _NoticeTool('content', 3000);   //第一个参数为轮播基本元素的父元素的id,第二个参数为轮播间隔时间
+    </script>
+</body>
+
+</html>
